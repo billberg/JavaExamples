@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one
+  or more contributor license agreements.  See the NOTICE file
+  distributed with this work for additional information
+  regarding copyright ownership.  The ASF licenses this file
+  to you under the Apache License, Version 2.0 (the
+  "License"); you may not use this file except in compliance
+  with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing,
+  software distributed under the License is distributed on an
+  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  KIND, either express or implied.  See the License for the
+  specific language governing permissions and limitations
+  under the License.
+-->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.github.billberg</groupId>
+	<artifactId>excel-util</artifactId>
+	<version>1.0.0</version>
+
+	<name>Excel用法</name>
+	<description>Excel常用操作方法</description>
+
+	<properties>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<Automatic-Module-Name>org.apache.maven.resolver.demo.snippets</Automatic-Module-Name>
+		<mavenVersion>3.8.3</mavenVersion>
+		<javaVersion>8</javaVersion>
+		<surefire.redirectTestOutputToFile>true</surefire.redirectTestOutputToFile>
+		<failsafe.redirectTestOutputToFile>${surefire.redirectTestOutputToFile}</failsafe.redirectTestOutputToFile>
+		<maven.site.path>resolver-archives/resolver-LATEST</maven.site.path>
+		<checkstyle.violation.ignore>None</checkstyle.violation.ignore>
+		<sisuVersion>0.3.5</sisuVersion>
+		<guiceVersion>4.2.3</guiceVersion>
+		<guavaVersion>30.1-jre</guavaVersion>
+		<guavafailureaccessVersion>1.0.1</guavafailureaccessVersion>
+		<slf4jVersion>1.7.32</slf4jVersion>
+	</properties>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>4.1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>4.1.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-csv</artifactId>
+			<version>1.6</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.11.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.11.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.15</version>
+			<exclusions>
+				<exclusion>
+					<groupId>com.sun.jmx</groupId>
+					<artifactId>jmxri</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.sun.jdmk</groupId>
+					<artifactId>jmxtools</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>javax.jms</groupId>
+					<artifactId>jms</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.10</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.sourceforge.htmlcleaner</groupId>
+			<artifactId>htmlcleaner</artifactId>
+			<version>2.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.7</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.7.1</version>
+			</plugin>
+
+		</plugins>
+	</build>
+
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.3.0</version>
+				<configuration>
+					<charset>UTF-8</charset>
+					<encoding>UTF-8</encoding>
+					<docencoding>UTF-8</docencoding>
+					<additionalJOption>-Xdoclint:none</additionalJOption>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.7.1</version>
+			</plugin>
+			<plugin>
+				<groupId>com.mycompany.maven</groupId>
+				<artifactId>simple-maven-plugin</artifactId>
+				<version>1.0-SNAPSHOT</version>
+			</plugin>
+		</plugins>
+	</reporting>
+
+</project>
