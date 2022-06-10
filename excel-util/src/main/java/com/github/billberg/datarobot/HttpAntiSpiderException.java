@@ -1,4 +1,4 @@
-package data.robot;
+package com.github.billberg.datarobot;
 
 public class HttpAntiSpiderException extends RuntimeException {
 

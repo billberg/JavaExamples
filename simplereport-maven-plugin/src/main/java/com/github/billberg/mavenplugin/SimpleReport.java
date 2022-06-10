@@ -1,4 +1,4 @@
-package com.mycompany.maven;
+package com.github.billberg.mavenplugin;
 
 import java.util.LinkedHashMap;
 import java.util.Locale;

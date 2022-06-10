@@ -1,9 +1,10 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.github.billberg</groupId>
 	<artifactId>JavaExamples</artifactId>
-	<version>1.0</version>
+	<version>1.0.0</version>
 	<packaging>pom</packaging>
 	<name>JavaExamples Parent</name>
 
@@ -15,16 +16,9 @@
 	<properties>
 		<spring.version>3.2.2.RELEASE</spring.version>
 		<jackson.version>1.9.10</jackson.version>
-		<jdk.version>17</jdk.version>
+		<jdk.version>1.8</jdk.version>
 	</properties>
 
-
-	<!-- 本地打包安装路径 -->
-	<!-- <repositories> <repository> <id>local</id> <url>file://D:/Documents/.m2/repository</url> 
-		</repository> </repositories> -->
-
-	<!-- <repositories> <repository> <id>local</id> <url>file://${user.home}/.m2/localRepository</url> 
-		</repository> </repositories> -->
 
 	<dependencyManagement>
 		<dependencies>
@@ -38,18 +32,6 @@
 				<groupId>org.postgresql</groupId>
 				<artifactId>postgresql</artifactId>
 				<version>42.3.1</version> <!-- Java 8 -->
-			</dependency>
-
-			<!-- 			<dependency> -->
-			<!-- 			    <groupId>commons-dbutils</groupId> -->
-			<!-- 			    <artifactId>commons-dbutils</artifactId> -->
-			<!-- 			    <version>1.7</version> -->
-			<!-- 			</dependency> -->
-
-			<dependency>
-				<groupId>redis.clients</groupId>
-				<artifactId>jedis</artifactId>
-				<version>2.9.0</version>
 			</dependency>
 
 			<dependency>
@@ -86,13 +68,6 @@
 				<artifactId>JsoupXpath</artifactId>
 				<version>2.4.3</version>
 			</dependency>
-
-			<dependency>
-				<groupId>com.google.code.gson</groupId>
-				<artifactId>gson</artifactId>
-				<version>2.3.1</version>
-			</dependency>
-
 
 			<dependency>
 				<groupId>com.alibaba</groupId>
@@ -136,26 +111,6 @@
 				<version>1.6</version>
 			</dependency>
 
-
-			<!-- <dependency> <groupId>org.nuiton.thirdparty</groupId> <artifactId>JRI</artifactId> 
-				<version>0.8-4</version> </dependency> -->
-
-			<!-- logging -->
-			<!-- <dependency> -->
-			<!-- <groupId>org.slf4j</groupId> -->
-			<!-- <artifactId>slf4j-log4j12</artifactId> -->
-			<!-- <version>1.7.5</version> -->
-			<!-- </dependency> -->
-
-
-			<!-- <dependency> -->
-			<!-- <groupId>org.apache.logging.log4j</groupId> -->
-			<!-- <artifactId>log4j</artifactId> -->
-			<!-- <version>2.11.0</version> -->
-			<!-- <type>pom</type> -->
-			<!-- </dependency> -->
-
-
 			<dependency>
 				<groupId>org.apache.logging.log4j</groupId>
 				<artifactId>log4j-api</artifactId>
@@ -193,24 +148,10 @@
 				<version>4.5.7</version>
 			</dependency>
 
-
 			<dependency>
 				<groupId>org.apache.commons</groupId>
 				<artifactId>commons-math3</artifactId>
 				<version>3.5</version>
-			</dependency>
-
-			<dependency>
-				<groupId>nz.ac.waikato.cms.weka</groupId>
-				<artifactId>weka-dev</artifactId>
-				<version>3.9.3</version>
-			</dependency>
-
-			<!-- 本地weka项目自己打包 -->
-			<dependency>
-				<groupId>nz.ac.waikato.cms.weka</groupId>
-				<artifactId>cascadeKMeans</artifactId>
-				<version>1.0.5-SNAPSHOT</version>
 			</dependency>
 
 			<dependency>
@@ -225,45 +166,10 @@
 				<version>3.2.10</version>
 			</dependency>
 
-
 			<dependency>
 				<groupId>com.google.guava</groupId>
 				<artifactId>guava</artifactId>
 				<version>23.6-jre</version>
-			</dependency>
-
-			<dependency>
-				<groupId>com.taobao.util</groupId>
-				<artifactId>taobao-express</artifactId>
-				<version>3.0.18</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.apache.commons</groupId>
-				<artifactId>commons-jexl</artifactId>
-				<version>2.1.1</version>
-			</dependency>
-
-			<dependency>
-				<groupId>it.sauronsoftware.cron4j</groupId>
-				<artifactId>cron4j</artifactId>
-				<version>2.2.5</version>
-			</dependency>
-
-			<dependency>
-				<groupId>R.rJava.jri</groupId>
-				<artifactId>JRI</artifactId>
-				<version>R3.5</version>
-			</dependency>
-			<dependency>
-				<groupId>R.rJava.jri</groupId>
-				<artifactId>JRIEngine</artifactId>
-				<version>R3.5</version>
-			</dependency>
-			<dependency>
-				<groupId>R.rJava.jri</groupId>
-				<artifactId>REngine</artifactId>
-				<version>R3.5</version>
 			</dependency>
 
 			<!-- 数据验证和测试 -->
@@ -271,24 +177,6 @@
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
 				<version>4.10</version>
-			</dependency>
-
-			<dependency>
-				<groupId>javax.mail</groupId>
-				<artifactId>mail</artifactId>
-				<version>1.4.7</version>
-			</dependency>
-
-			<dependency>
-				<groupId>tech.tablesaw</groupId>
-				<artifactId>tablesaw-core</artifactId>
-				<version>0.31.0</version>
-			</dependency>
-
-			<dependency>
-				<groupId>dom4j</groupId>
-				<artifactId>dom4j</artifactId>
-				<version>1.6.1</version>
 			</dependency>
 
 		</dependencies>
@@ -320,20 +208,26 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-site-plugin</artifactId>
-					<version>3.12.0</version>
+					<version>3.7.1</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>
+
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-webdav-jackrabbit</artifactId>
+				<version>3.2.0</version>
+			</extension>
+		</extensions>
 	</build>
 
-
 	<reporting>
-
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>3.4.0</version>
+				<version>3.3.0</version>
 				<configuration>
 					<charset>UTF-8</charset>
 					<encoding>UTF-8</encoding>
@@ -341,8 +235,19 @@
 					<additionalJOption>-Xdoclint:none</additionalJOption>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>com.github.billberg</groupId>
+				<artifactId>simplereport-maven-plugin</artifactId>
+				<version>1.0-SNAPSHOT</version>
+			</plugin>
 		</plugins>
-
 	</reporting>
+
+	<distributionManagement>
+		<site>
+			<id>tomcatServer</id>
+			<url>dav:http://localhost:8080/maven-sites/JavaExamples/</url>
+		</site>
+	</distributionManagement>
 
 </project>

@@ -1,4 +1,4 @@
-package data.robot;
+package com.github.billberg.datarobot;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -14,10 +14,8 @@ import com.alibaba.fastjson.JSONObject;
 import com.github.billberg.utils.ExcelUtil;
 
 /**
- * THS分红历史数据，数据质量最高
- * 下载中遇到反爬虫禁止下载，而且禁止时间很长（非常麻烦），下载策略加入时间控制，可以慢速下载
+ * GitHub爬虫
  * 
- * @version v2020.6
  * @author billberg
  * 
  */
@@ -40,7 +38,7 @@ public class GithubDataRobot {
 
 	
 	/**
-	 * github project地址
+	 * GitHub Project地址
 	 * @param symbol
 	 * @return {stars,description}
 	 * @throws IOException
@@ -102,9 +100,7 @@ public class GithubDataRobot {
 
 	
 	/**
-	 * 全量下载，增量更新
-	 * THS数据会更新，所以增量下载的本地数据有错误。
-	 * 案例：000921 {"财年":2019,"报告期":"2019年报","董事会日期":"2020-04-15","分红方案说明":"10派3.95元(含税)","分红总额":35700,"方案进度":"董事会预案","股利支付率":29.92}
+	 * 批量下载方法
 	 * @return 下载失败数
 	 */
 	public static int downloadData() {

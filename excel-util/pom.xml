@@ -22,7 +22,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.github.billberg</groupId>
+	<parent>
+		<groupId>com.github.billberg</groupId>
+		<artifactId>JavaExamples</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	
 	<artifactId>excel-util</artifactId>
 	<version>1.0.0</version>
 
@@ -116,16 +121,36 @@
 
 	</dependencies>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-site-plugin</artifactId>
-				<version>3.7.1</version>
-			</plugin>
+<!-- 	<build> -->
+<!-- 		<plugins> -->
+<!-- 			<plugin> -->
+<!-- 				<groupId>org.apache.maven.plugins</groupId> -->
+<!-- 				<artifactId>maven-site-plugin</artifactId> -->
+<!-- 				<version>3.7.1</version> -->
+<!-- 			</plugin> -->
 
-		</plugins>
-	</build>
+<!-- 		</plugins> -->
+<!-- 	</build> -->
+	
+<!--  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>3.7.1</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+    
+    <extensions>
+		<extension>
+			<groupId>org.apache.maven.wagon</groupId>
+			<artifactId>wagon-webdav-jackrabbit</artifactId>
+			<version>3.2.0</version>
+		</extension>
+	</extensions>
+  </build>
 
 	<reporting>
 		<plugins>
@@ -144,6 +169,7 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-site-plugin</artifactId>
 				<version>3.7.1</version>
+
 			</plugin>
 			<plugin>
 				<groupId>com.mycompany.maven</groupId>
@@ -152,5 +178,12 @@
 			</plugin>
 		</plugins>
 	</reporting>
-
+	
+	<distributionManagement>
+ <site>
+ <id>tomcatServer</id>
+<url>dav:http://localhost:8080/maven-sites/site2/</url>
+ </site>
+</distributionManagement>
+-->
 </project>

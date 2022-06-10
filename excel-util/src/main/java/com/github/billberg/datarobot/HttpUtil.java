@@ -1,4 +1,4 @@
-package data.robot;
+package com.github.billberg.datarobot;
 
 import java.io.BufferedReader;
 import java.io.IOException;
